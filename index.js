@@ -15,6 +15,7 @@ app.get('*', function(req, res){
 app.post('/test', function(request, response){
 	console.log('REQUEST', request);
 	console.log('REQUEST BODY', request.body) 
+	response.status(200).send('OK')
 });
 var port = process.env.PORT||3000;
 
