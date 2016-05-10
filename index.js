@@ -33,6 +33,7 @@ app.post('/exportData', function (request, response) {
 
 	var req = https.request(optionspost, function (res) {
 		console.log(JSON.stringify(res));
+		response.status(200).send('OK');
 	});
 
 	req.on('error', (e) => {
