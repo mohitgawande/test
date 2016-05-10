@@ -1,7 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-//var querystring = require('querystring');
-var paytm = require('./sdks/paytm/checksum.js')
 
 var app = express();
 console.log(__dirname);
