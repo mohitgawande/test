@@ -32,12 +32,13 @@ app.post('/exportData', function (request, response) {
 	};
 
 	var req = https.request(optionspost, function (res) {
-		console.log(JSON.stringify(res));
+		console.log(res);
 		response.status(200).send('OK');
 	});
 
 	req.on('error', (e) => {
 		console.log(`problem with request: ` + e.message);
+		response.status(200).send('OK');
 	});
 
 	req.write(postData);
